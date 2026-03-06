@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#052D51" />
+    <title>SMART CALDA - CONTROLE DE O.S E CALDA</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Metallic / Futuristic Palette
+              'metal': {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b',
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+              },
+              'brand-blue': {
+                DEFAULT: '#15803d', // Dark Green (was Deep Metal Blue)
+                50: '#f0fdf4',      // Green 50
+                100: '#dcfce7',     // Green 100
+                200: '#bbf7d0',     // Green 200
+                500: '#22c55e',     // Neon Green (Logo Color)
+                600: '#16a34a',     // Green 600
+                700: '#15803d',     // Green 700
+                900: '#14532d'      // Green 900
+              },
+              'brand-slate': {
+                DEFAULT: '#94a3b8', // Metallic Grey
+                50: '#f8fafc',
+                500: '#64748b'
+              },
+              'brand-yellow': {
+                 DEFAULT: '#fbbf24', // Gold
+                 100: '#fef3c7',
+                 500: '#d97706' // Dark Gold
+              },
+              'sugar-green': {
+                50: '#f0fdf4',
+                100: '#dcfce7',
+                500: '#22c55e', // Neon Green
+                600: '#16a34a',
+                700: '#15803d',
+              },
+              'neon-cyan': '#22c55e', // Changed to Green to match theme
+              'neon-purple': '#8b5cf6',
+            },
+            backgroundImage: {
+              'metal-gradient': 'linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 50%, #94a3b8 100%)',
+              'metal-dark': 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+              'glass': 'linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
+            },
+            boxShadow: {
+              'glow': '0 0 15px rgba(34, 197, 94, 0.4)', // Green Glow
+              'glow-green': '0 0 15px rgba(34, 197, 94, 0.3)',
+              'metal': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-out': 'fadeOut 0.5s ease-out forwards',
+              'zoom-in': 'zoomIn 1s ease-out forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeOut: {
+                '0%': { opacity: '1' },
+                '100%': { opacity: '0' },
+              },
+              zoomIn: {
+                '0%': { transform: 'scale(0.95)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@18.3.1/",
+    "react": "https://esm.sh/react@18.3.1",
+    "react-dom/": "https://esm.sh/react-dom@18.3.1/",
+    "react-dom": "https://esm.sh/react-dom@18.3.1",
+    "uuid": "https://esm.sh/uuid@9.0.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.1/package/xlsx.mjs",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.8.2",
+    "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1"
+  }
+}
+</script>
+<style>
+  /* Mobile optimization adjustments */
+  body { -webkit-tap-highlight-color: transparent; }
+  input, select, button { outline: none; }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-gray-900 antialiased selection:bg-brand-blue-100 selection:text-brand-blue-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
